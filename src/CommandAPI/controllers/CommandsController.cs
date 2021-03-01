@@ -22,6 +22,7 @@ namespace CommandAPI.Controllers
     //         return new string[] {"this", "is", "hard", "coded"};
     //     }
 
+        // GET api/command
         [HttpGet]
         public ActionResult<IEnumerable<Command>> GetAllCommands() 
         {
@@ -30,6 +31,7 @@ namespace CommandAPI.Controllers
             return Ok(commandItems);
         }
 
+        // GET api/command/{id}
         [HttpGet("{id}")]
         public ActionResult<Command> GetCommandById(int id) 
         {
